@@ -22,11 +22,27 @@ section h3 {
 	margin-bottom: 5px;
 	font-size: 2.2em;
 	font-weight: 600;
+	font-family: 'Playfair Display', serif;
+	letter-spacing: -0.02em;
+	text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	position: relative;
+}
+
+section h3::after {
+	content: '';
+	position: absolute;
+	bottom: -8px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 3px;
+	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+	border-radius: 2px;
 }
 
 section > .container > p {
 	text-align: center;
-	color: #666;
+	color: #000;
 	margin-bottom: 20px;
 	font-size: 1.1em;
 }
@@ -46,13 +62,13 @@ section > .container > p {
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 	overflow: hidden;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	/* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
-.content-card:hover {
+/* .content-card:hover {
 	transform: translateY(-4px);
 	box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
+} */
 
 /* Единый заголовок для всех карточек - используем цвета header */
 .content-header {
@@ -160,7 +176,7 @@ section > .container > p {
 	margin: 0;
 	line-height: 1.5;
 	font-style: italic;
-	color: #666;
+	color: #000;
 }
 
 /* Все секции используют единую цветовую палитру header */
@@ -318,6 +334,19 @@ section > .container > p {
 	font-weight: bold;
 }
 
+.skill-title img {
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+}
+
+/* Специальные стили для go-logo.png */
+.skill-title img[src*="go-logo.png"] {
+	width: 32px;
+	height: 32px;
+	object-fit: cover;
+}
+
 .skill-level-negate {
 	height: 12px;
 	background: linear-gradient(90deg, #4acaa8, #d2f2e9);
@@ -325,26 +354,114 @@ section > .container > p {
 	transition: width 0.3s ease;
 }
 
-/* Классы для замены встроенных стилей */
-.skill-level-40 {
-	width: 40%;
-}
-
-.skill-level-50 {
-	width: 50%;
-}
-
-.skill-level-75 {
-	width: 75%;
-}
-
-.skill-level-30 {
-	width: 30%;
-}
-
-.skill-level-35 {
-	width: 35%;
-}
+/* Универсальная система для skill-level от 0 до 100 */
+/* 
+Примеры использования:
+- <div class="skill-level-negate skill-level-25"></div> - 25% прогресс
+- <div class="skill-level-negate skill-level-67"></div> - 67% прогресс  
+- <div class="skill-level-negate skill-level-100"></div> - 100% прогресс
+*/
+.skill-level-0 { width: 0%; }
+.skill-level-1 { width: 1%; }
+.skill-level-2 { width: 2%; }
+.skill-level-3 { width: 3%; }
+.skill-level-4 { width: 4%; }
+.skill-level-5 { width: 5%; }
+.skill-level-6 { width: 6%; }
+.skill-level-7 { width: 7%; }
+.skill-level-8 { width: 8%; }
+.skill-level-9 { width: 9%; }
+.skill-level-10 { width: 10%; }
+.skill-level-11 { width: 11%; }
+.skill-level-12 { width: 12%; }
+.skill-level-13 { width: 13%; }
+.skill-level-14 { width: 14%; }
+.skill-level-15 { width: 15%; }
+.skill-level-16 { width: 16%; }
+.skill-level-17 { width: 17%; }
+.skill-level-18 { width: 18%; }
+.skill-level-19 { width: 19%; }
+.skill-level-20 { width: 20%; }
+.skill-level-21 { width: 21%; }
+.skill-level-22 { width: 22%; }
+.skill-level-23 { width: 23%; }
+.skill-level-24 { width: 24%; }
+.skill-level-25 { width: 25%; }
+.skill-level-26 { width: 26%; }
+.skill-level-27 { width: 27%; }
+.skill-level-28 { width: 28%; }
+.skill-level-29 { width: 29%; }
+.skill-level-30 { width: 30%; }
+.skill-level-31 { width: 31%; }
+.skill-level-32 { width: 32%; }
+.skill-level-33 { width: 33%; }
+.skill-level-34 { width: 34%; }
+.skill-level-35 { width: 35%; }
+.skill-level-36 { width: 36%; }
+.skill-level-37 { width: 37%; }
+.skill-level-38 { width: 38%; }
+.skill-level-39 { width: 39%; }
+.skill-level-40 { width: 40%; }
+.skill-level-41 { width: 41%; }
+.skill-level-42 { width: 42%; }
+.skill-level-43 { width: 43%; }
+.skill-level-44 { width: 44%; }
+.skill-level-45 { width: 45%; }
+.skill-level-46 { width: 46%; }
+.skill-level-47 { width: 47%; }
+.skill-level-48 { width: 48%; }
+.skill-level-49 { width: 49%; }
+.skill-level-50 { width: 50%; }
+.skill-level-51 { width: 51%; }
+.skill-level-52 { width: 52%; }
+.skill-level-53 { width: 53%; }
+.skill-level-54 { width: 54%; }
+.skill-level-55 { width: 55%; }
+.skill-level-56 { width: 56%; }
+.skill-level-57 { width: 57%; }
+.skill-level-58 { width: 58%; }
+.skill-level-59 { width: 59%; }
+.skill-level-60 { width: 60%; }
+.skill-level-61 { width: 61%; }
+.skill-level-62 { width: 62%; }
+.skill-level-63 { width: 63%; }
+.skill-level-64 { width: 64%; }
+.skill-level-65 { width: 65%; }
+.skill-level-66 { width: 66%; }
+.skill-level-67 { width: 67%; }
+.skill-level-68 { width: 68%; }
+.skill-level-69 { width: 69%; }
+.skill-level-70 { width: 70%; }
+.skill-level-71 { width: 71%; }
+.skill-level-72 { width: 72%; }
+.skill-level-73 { width: 73%; }
+.skill-level-74 { width: 74%; }
+.skill-level-75 { width: 75%; }
+.skill-level-76 { width: 76%; }
+.skill-level-77 { width: 77%; }
+.skill-level-78 { width: 78%; }
+.skill-level-79 { width: 79%; }
+.skill-level-80 { width: 80%; }
+.skill-level-81 { width: 81%; }
+.skill-level-82 { width: 82%; }
+.skill-level-83 { width: 83%; }
+.skill-level-84 { width: 84%; }
+.skill-level-85 { width: 85%; }
+.skill-level-86 { width: 86%; }
+.skill-level-87 { width: 87%; }
+.skill-level-88 { width: 88%; }
+.skill-level-89 { width: 89%; }
+.skill-level-90 { width: 90%; }
+.skill-level-91 { width: 91%; }
+.skill-level-92 { width: 92%; }
+.skill-level-93 { width: 93%; }
+.skill-level-94 { width: 94%; }
+.skill-level-95 { width: 95%; }
+.skill-level-96 { width: 96%; }
+.skill-level-97 { width: 97%; }
+.skill-level-98 { width: 98%; }
+.skill-level-99 { width: 99%; }
+.skill-level-100 { width: 100%; }
 
 .detailed-list {
 	line-height: 1.1em;
@@ -383,13 +500,13 @@ section > .container > p {
 	background: white;
 	border-radius: 6px;
 	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	/* transition: transform 0.2s ease, box-shadow 0.2s ease; */
 }
 
-.contact-item:hover {
+/* .contact-item:hover {
 	transform: translateY(-2px);
 	box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
+} */
 
 .contact-item .icon {
 	font-size: 1.5em;
@@ -464,17 +581,17 @@ section > .container > p {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	transition: all 0.3s ease;
+	/* transition: all 0.3s ease; */
 	user-select: none;
 	position: relative;
 	z-index: 2;
 }
 
-.spoiler-header:hover {
+/* .spoiler-header:hover {
 	background: linear-gradient(135deg, #2c8f7a, #1a6b5a);
 	transform: translateY(-1px);
 	box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
+} */
 
 .spoiler-header h5 {
 	margin: 0;
@@ -483,6 +600,11 @@ section > .container > p {
 	display: flex;
 	align-items: center;
 	gap: 10px;
+}
+
+/* Специальный стиль для заголовка "Уровень навыков" */
+.skills-level-header {
+	color: #000 !important;
 }
 
 .spoiler-icon {
@@ -525,4 +647,8 @@ section > .container > p {
 		padding: 12px;
 		max-height: 8000px; /* Еще больше для мобильных */
 	}
+} 
+
+/* Стили для счетчика опыта работы */
+#experience-text {
 } 

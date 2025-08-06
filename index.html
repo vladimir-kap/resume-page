@@ -9,6 +9,9 @@
 		<title>Резюме: Владимир - QA Engineer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<link rel="stylesheet" href="assets/css/inline-styles.css" />
@@ -21,7 +24,7 @@
 					<h1 id="logo"><a href="#">Владимир</a></h1>
 					<p>Middle AQA Engineer<br />
 					<div class="experience-timer" id="experienceResult"></div>
-					Специализируюсь на тестировании ПО. Автоматизирую процессы в IT.</p>
+					</p>
 				</header>
 				<nav id="nav">
 					<ul>
@@ -50,20 +53,20 @@
 						<!-- One -->
 							<section id="one">
 								<div class="container">
-									<h3>О себе</h3>
-									<p>Опытный специалист по обеспечению качества программного обеспечения</p>
+									<h3 class="content-card">О себе</h3>
+									<!-- <p>Опытный специалист по обеспечению качества программного обеспечения</p> -->
 									<div class="content-grid">
 										<article class="content-card">
 											<div class="content-header">
 												<h4><i class="icon solid fa-user"></i> QA Engineer / Тестировщик</h4>
 												<div class="content-meta">
-													<span class="content-role"><strong>Опыт:</strong> Более 5 лет в тестировании</span>
+													<span class="content-role"><strong>Опыт:</strong> Более <span id="experience-text-meta">5 лет</span> в тестировании</span>
 												</div>
 											</div>
 											<div class="content-body">
 												<div class="content-description">
 													<p><strong>Специализация</strong></p>
-													<p>Опытный QA Engineer с более чем 5 годами опыта в тестировании веб-приложений, мобильных приложений и десктопных решений. Специализируюсь на автоматизированном тестировании, функциональном тестировании и обеспечении качества программного обеспечения. Имею опыт работы с различными методологиями разработки (Agile, Scrum) и инструментами тестирования.</p>
+													<p>Опытный QA Engineer с более чем <span id="experience-text">5 лет</span> опыта в тестировании веб-приложений, мобильных приложений и десктопных решений. Специализируюсь на автоматизированном тестировании, функциональном тестировании и обеспечении качества программного обеспечения. Имею опыт работы с различными методологиями разработки (Agile, Scrum) и инструментами тестирования.</p>
 												</div>
 												<div class="content-details">
 													<div class="detail-item">
@@ -76,7 +79,7 @@
 												<div class="content-section">
 													<div class="spoiler-container">
 														<div class="spoiler-header">
-															<h5><i class="icon solid fa-chart-bar"></i> Уровень навыков</h5>
+															<h5 class="skills-level-header"><i class="icon solid fa-chart-bar"></i> Уровень навыков</h5>
 															<i class="icon solid fa-chevron-down spoiler-icon" id="skills-spoiler-icon"></i>
 														</div>
 														<div class="spoiler-content" id="skills-spoiler">
@@ -106,6 +109,10 @@
 																	<div class="skill-title"><img src="images/git-logo.png" alt="icon" width="24" height="24">Git</div>
 																	<div class="skill-level-negate skill-level-40"></div>
 																</div>
+																<div class="skill-bar">
+																	<div class="skill-title"><img src="images/go-logo.png" alt="icon" width="24" height="24">Golang</div>
+																	<div class="skill-level-negate skill-level-10"></div>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -119,8 +126,8 @@
 						<!-- Two -->
 							<section id="two">
 								<div class="container">
-									<h3>Навыки и компетенции</h3>
-									<p>Комплексный опыт в различных областях тестирования и автоматизации</p>
+									<h3 class="content-card">Навыки и компетенции</h3>
+									<!-- <p>Комплексный опыт в различных областях тестирования и автоматизации</p> -->
 									<div class="content-grid">
 										<article class="content-card">
 											<div class="content-header">
@@ -156,7 +163,7 @@
 												<div class="content-section">
 													<div class="spoiler-container">
 														<div class="spoiler-header">
-															<h5><i class="icon solid fa-list-ul"></i> Детальные навыки</h5>
+															<h5 class="skills-level-header"><i class="icon solid fa-list-ul"></i> Детальные навыки</h5>
 															<i class="icon solid fa-chevron-down spoiler-icon" id="detailed-skills-spoiler-icon"></i>
 														</div>
 														<div class="spoiler-content" id="detailed-skills-spoiler">
@@ -319,8 +326,8 @@
 						<!-- Three -->
 							<section id="three">
 								<div class="container">
-									<h3>Прошлые проекты</h3>
-									<p>Опыт работы над различными проектами в сфере IT</p>
+									<h3 class="content-card">Прошлые проекты</h3>
+									<!-- <p>Опыт работы над различными проектами в сфере IT</p> -->
 									<div class="content-grid">
 										<article class="content-card">
 											<div class="content-header">
@@ -540,8 +547,8 @@
 						<!-- Four -->
 							<section id="four">
 								<div class="container">
-									<h3>Образование</h3>
-									<p>Академическая подготовка и профессиональное развитие</p>
+									<h3 class="content-card">Образование</h3>
+									<!-- <p>Академическая подготовка и профессиональное развитие</p> -->
 									<div class="content-grid">
 										<article class="content-card">
 											<div class="content-header">
@@ -595,29 +602,14 @@
 						<!-- Five -->
 							<section id="five">
 								<div class="container">
-									<h3>Контакты</h3>
-									<p>Свяжитесь со мной для обсуждения возможностей сотрудничества</p>
+									<h3 class="content-card">Контакты</h3>
+									<!-- <p>Свяжитесь со мной для обсуждения возможностей сотрудничества</p> -->
 									<div class="content-grid">
 										<article class="content-card">
 											<div class="content-header">
 												<h4><i class="icon solid fa-address-book"></i> Контактная информация</h4>
-												<div class="content-meta">
-													<span class="content-role"><strong>Способ связи:</strong> Email, Telegram, GitHub</span>
-												</div>
 											</div>
 											<div class="content-body">
-												<div class="content-description">
-													<p><strong>Способы связи</strong></p>
-													<p>Выберите удобный для вас способ связи для обсуждения возможностей сотрудничества</p>
-												</div>
-												<div class="content-details">
-													<div class="detail-item">
-														<strong>Основные контакты:</strong> Email, Telegram, GitHub
-													</div>
-													<div class="detail-item">
-														<strong>Время ответа:</strong> В течение 24 часов
-													</div>
-												</div>
 												<div class="content-section">
 													<h5>Контактные данные:</h5>
 													<div class="contact-grid">
@@ -646,52 +638,6 @@
 												</div>
 											</div>
 										</article>
-
-										<article class="content-card">
-											<div class="content-header">
-												<h4><i class="icon solid fa-paper-plane"></i> Отправить сообщение</h4>
-												<div class="content-meta">
-													<span class="content-role"><strong>Форма обратной связи</strong></span>
-												</div>
-											</div>
-											<div class="content-body">
-												<div class="content-description">
-													<p><strong>Форма обратной связи</strong></p>
-													<p>Заполните форму ниже для отправки сообщения</p>
-												</div>
-												<div class="content-section">
-													<h5>Сообщение:</h5>
-													<form method="post" action="#">
-														<div class="row gtr-uniform gtr-50">
-															<div class="col-6 col-12-xsmall">
-																<input type="text" name="name" id="name" placeholder="Ваше имя" required />
-															</div>
-															<div class="col-6 col-12-xsmall">
-																<input type="email" name="email" id="email" placeholder="Ваш email" required />
-															</div>
-															<div class="col-12">
-																<select name="subject" id="subject">
-																	<option value="">- Выберите тему -</option>
-																	<option value="job-offer">Предложение о работе</option>
-																	<option value="project-discussion">Обсуждение проекта</option>
-																	<option value="consultation">Консультация</option>
-																	<option value="other">Другое</option>
-																</select>
-															</div>
-															<div class="col-12">
-																<textarea name="message" id="message" placeholder="Ваше сообщение" rows="6" required></textarea>
-															</div>
-															<div class="col-12">
-																<ul class="actions">
-																	<li><input type="submit" value="Отправить сообщение" class="primary" /></li>
-																	<li><input type="reset" value="Очистить" /></li>
-																</ul>
-															</div>
-														</div>
-													</form>
-												</div>
-											</div>
-										</article>
 									</div>
 								</div>
 							</section>
@@ -699,13 +645,13 @@
 					</div>
 
 				<!-- Footer -->
-					<section id="footer">
+					<!-- <section id="footer">
 						<div class="container">
 							<ul class="copyright">
-								<li>&copy; Владимир - QA Engineer. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Владимир - QA Engineer. All rights reserved.</li>
 							</ul>
 						</div>
-					</section>
+					</section> -->
 
 			</div>
 
@@ -719,6 +665,7 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/spoiler.js"></script>
 			<script src="1_calculateExpirienceTime.js"></script>
+			<script src="assets/js/experience-counter.js"></script>
 
 	</body>
 </html>
