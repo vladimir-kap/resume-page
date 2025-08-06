@@ -1,9 +1,23 @@
 /* Кастомные стили для резюме */
 
+/* Цветовая схема: бежево-серые тона для доверительности и престижа */
+:root {
+	--primary-beige: #d4c4a8;      /* Основной бежевый */
+	--light-beige: #f5f1e8;        /* Светлый бежевый */
+	--dark-beige: #b8a898;         /* Темный бежевый */
+	--warm-gray: #8b8578;          /* Теплый серый */
+	--cool-gray: #6b6b6b;          /* Холодный серый */
+	--light-gray: #f8f6f3;         /* Светло-серый */
+	--dark-gray: #4a4a4a;          /* Темно-серый */
+	--accent-gold: #c4a484;        /* Акцентный золотистый */
+	--text-dark: #2c2c2c;          /* Темный текст */
+	--text-light: #6b6b6b;         /* Светлый текст */
+}
+
 /* Общие стили для всех секций */
 section {
 	padding: 20px 0;
-	background: #fafafa;
+	background: var(--light-gray);
 }
 
 section:nth-child(even) {
@@ -18,7 +32,7 @@ section .container {
 
 section h3 {
 	text-align: center;
-	color: #333;
+	color: var(--text-dark);
 	margin-bottom: 5px;
 	font-size: 2.2em;
 	font-weight: 600;
@@ -36,13 +50,13 @@ section h3::after {
 	transform: translateX(-50%);
 	width: 60px;
 	height: 3px;
-	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+	background: linear-gradient(135deg, var(--primary-beige), var(--dark-beige));
 	border-radius: 2px;
 }
 
 section > .container > p {
 	text-align: center;
-	color: #000;
+	color: var(--text-dark);
 	margin-bottom: 20px;
 	font-size: 1.1em;
 }
@@ -58,9 +72,9 @@ section > .container > p {
 /* Единая карточка для всех блоков */
 .content-card {
 	background: #ffffff;
-	border: 1px solid #e4e4e4;
+	border: 1px solid var(--light-beige);
 	border-radius: 8px;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 8px rgba(139, 133, 120, 0.1);
 	overflow: hidden;
 	/* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
@@ -70,10 +84,10 @@ section > .container > p {
 	box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 } */
 
-/* Единый заголовок для всех карточек - используем цвета header */
+/* Единый заголовок для всех карточек - используем бежево-серые тона */
 .content-header {
-	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
-	color: white;
+	background: linear-gradient(135deg, var(--primary-beige), var(--dark-beige));
+	color: var(--text-dark);
 	padding: 15px;
 }
 
@@ -116,13 +130,13 @@ section > .container > p {
 .content-description p {
 	margin: 0;
 	font-size: 1.1em;
-	color: #333;
+	color: var(--text-dark);
 	line-height: 1.6;
 }
 
 .content-description p:first-child {
 	font-size: 1.2em;
-	color: #4acaa8;
+	color: var(--accent-gold);
 	font-weight: 600;
 	margin-bottom: 6px;
 }
@@ -133,9 +147,9 @@ section > .container > p {
 	gap: 15px;
 	margin-bottom: 15px;
 	padding: 15px;
-	background: #f8f9fa;
+	background: var(--light-gray);
 	border-radius: 8px;
-	border-left: 4px solid #4acaa8;
+	border-left: 4px solid var(--primary-beige);
 }
 
 .detail-item {
@@ -144,11 +158,11 @@ section > .container > p {
 }
 
 .detail-item strong {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 .content-section h5 {
-	color: #4acaa8;
+	color: var(--accent-gold);
 	margin: 0 0 10px 0;
 	font-size: 1.1em;
 	font-weight: 600;
@@ -183,95 +197,95 @@ section > .container > p {
 
 /* Секция "О себе" */
 #one .content-card {
-	border-left: 4px solid #4acaa8;
+	border-left: 4px solid var(--primary-beige);
 }
 
 #one .content-header {
-	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+	background: linear-gradient(135deg, var(--primary-beige), var(--dark-beige));
 }
 
 /* Секция "Навыки" */
 #two .content-card {
-	border-left: 4px solid #4acaa8;
+	border-left: 4px solid var(--primary-beige);
 }
 
 #two .content-header {
-	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+	background: linear-gradient(135deg, var(--primary-beige), var(--dark-beige));
 }
 
 #two .content-description p:first-child {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 #two .detail-item strong {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 #two .content-section h5 {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 /* Секция "Проекты" */
 #three .content-card {
-	border-left: 4px solid #4acaa8;
+	border-left: 4px solid var(--primary-beige);
 }
 
 #three .content-header {
-	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+	background: linear-gradient(135deg, var(--primary-beige), var(--dark-beige));
 }
 
 #three .content-description p:first-child {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 #three .detail-item strong {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 #three .content-section h5 {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 /* Секция "Образование" */
 #four .content-card {
-	border-left: 4px solid #4acaa8;
+	border-left: 4px solid var(--primary-beige);
 }
 
 #four .content-header {
-	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+	background: linear-gradient(135deg, var(--primary-beige), var(--dark-beige));
 }
 
 #four .content-description p:first-child {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 #four .detail-item strong {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 #four .content-section h5 {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 /* Секция "Контакты" */
 #five .content-card {
-	border-left: 4px solid #4acaa8;
+	border-left: 4px solid var(--primary-beige);
 }
 
 #five .content-header {
-	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+	background: linear-gradient(135deg, var(--primary-beige), var(--dark-beige));
 }
 
 #five .content-description p:first-child {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 #five .detail-item strong {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 #five .content-section h5 {
-	color: #4acaa8;
+	color: var(--accent-gold);
 }
 
 /* Специальные отступы для секции "О себе" */
@@ -312,7 +326,7 @@ section > .container > p {
 
 /* Дополнительные стили для существующих элементов */
 .experience-timer {
-	color: #4acaa8;
+	color: var(--accent-gold);
 	font-weight: bold;
 	font-size: 1.1em;
 }
@@ -322,7 +336,7 @@ section > .container > p {
 	align-items: center;
 	margin-bottom: 10px;
 	padding: 4px;
-	background: #f8f9fa;
+	background: var(--light-gray);
 	border-radius: 5px;
 }
 
@@ -349,7 +363,7 @@ section > .container > p {
 
 .skill-level-negate {
 	height: 12px;
-	background: linear-gradient(90deg, #4acaa8, #d2f2e9);
+	background: linear-gradient(90deg, var(--primary-beige), var(--accent-gold));
 	border-radius: 6px;
 	transition: width 0.3s ease;
 }
@@ -470,7 +484,7 @@ section > .container > p {
 
 .subheading {
 	font-weight: bold;
-	color: #4acaa8;
+	color: var(--accent-gold);
 	display: block;
 	margin-top: 15px;
 	margin-bottom: 5px;
@@ -481,7 +495,7 @@ section > .container > p {
 }
 
 .blue-shadow-text {
-	color: #4acaa8;
+	color: var(--accent-gold);
 	text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
@@ -499,7 +513,7 @@ section > .container > p {
 	padding: 15px;
 	background: white;
 	border-radius: 6px;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 4px rgba(139, 133, 120, 0.1);
 	/* transition: transform 0.2s ease, box-shadow 0.2s ease; */
 }
 
@@ -510,20 +524,20 @@ section > .container > p {
 
 .contact-item .icon {
 	font-size: 1.5em;
-	color: #4acaa8;
+	color: var(--accent-gold);
 	min-width: 30px;
 	text-align: center;
 }
 
 .contact-item a {
-	color: #4acaa8;
+	color: var(--accent-gold);
 	text-decoration: none;
 	border-bottom: 1px solid transparent;
 	transition: border-color 0.2s ease;
 }
 
 .contact-item a:hover {
-	border-bottom-color: #4acaa8;
+	border-bottom-color: var(--accent-gold);
 }
 
 /* Стили для форм */
@@ -535,7 +549,7 @@ section > .container > p {
 .content-section select,
 .content-section textarea {
 	background: white;
-	border: 1px solid #e4e4e4;
+	border: 1px solid var(--light-beige);
 	border-radius: 4px;
 	padding: 12px;
 	transition: border-color 0.2s ease;
@@ -544,7 +558,7 @@ section > .container > p {
 .content-section input:focus,
 .content-section select:focus,
 .content-section textarea:focus {
-	border-color: #4acaa8;
+	border-color: var(--primary-beige);
 	outline: none;
 }
 
@@ -573,8 +587,8 @@ section > .container > p {
 }
 
 .spoiler-header {
-	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
-	color: white;
+	background: linear-gradient(135deg, var(--primary-beige), var(--dark-beige));
+	color: var(--text-dark);
 	padding: 12px 15px;
 	border-radius: 6px;
 	cursor: pointer;
@@ -604,7 +618,7 @@ section > .container > p {
 
 /* Специальный стиль для заголовка "Уровень навыков" */
 .skills-level-header {
-	color: #000 !important;
+	color: var(--text-dark) !important;
 }
 
 .spoiler-icon {
@@ -651,4 +665,81 @@ section > .container > p {
 
 /* Стили для счетчика опыта работы */
 #experience-text {
+} 
+
+/* Стили для обновления header с бежево-серой цветовой схемой */
+#header {
+	background: linear-gradient(135deg, var(--primary-beige), var(--dark-beige)) !important;
+	color: var(--text-dark) !important;
+}
+
+#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
+	color: var(--text-dark) !important;
+}
+
+#header h1 a, #header h2 a, #header h3 a, #header h4 a, #header h5 a, #header h6 a {
+	color: var(--text-dark) !important;
+}
+
+#header header p {
+	color: var(--text-dark) !important;
+}
+
+#header a {
+	color: var(--text-dark) !important;
+}
+
+#header a:hover {
+	color: var(--accent-gold) !important;
+}
+
+#header > header p {
+	color: var(--text-dark) !important;
+}
+
+#header > footer .icons li a {
+	color: var(--text-dark) !important;
+}
+
+#header > footer .icons li a:hover {
+	color: var(--accent-gold) !important;
+}
+
+/* Стили для иконок в header */
+#header .icon {
+	color: var(--text-dark) !important;
+}
+
+#header .icon:hover {
+	color: var(--accent-gold) !important;
+}
+
+/* Стили для навигации - исправляем зеленые цвета */
+#header > nav ul li {
+	border-top: solid 2px var(--primary-beige) !important;
+}
+
+#header > nav ul li a.active {
+	background: #fff !important;
+	color: var(--accent-gold) !important;
+}
+
+/* Дополнительные стили для навигации */
+#header > nav ul li a {
+	color: var(--text-dark) !important;
+}
+
+#header > nav ul li a:hover {
+	color: var(--accent-gold) !important;
+}
+
+/* Стили для feature-icons - исправляем зеленые цвета */
+ul.feature-icons li:before {
+	background: var(--primary-beige) !important;
+	color: var(--text-dark) !important;
+}
+
+ul.feature-icons li:hover:before {
+	background: var(--accent-gold) !important;
+	color: #fff !important;
 } 
