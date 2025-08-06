@@ -1,0 +1,528 @@
+/* Кастомные стили для резюме */
+
+/* Общие стили для всех секций */
+section {
+	padding: 20px 0;
+	background: #fafafa;
+}
+
+section:nth-child(even) {
+	background: #ffffff;
+}
+
+section .container {
+	max-width: 100%;
+	margin: 10px auto;
+	padding: 0 20px;
+}
+
+section h3 {
+	text-align: center;
+	color: #333;
+	margin-bottom: 5px;
+	font-size: 2.2em;
+	font-weight: 600;
+}
+
+section > .container > p {
+	text-align: center;
+	color: #666;
+	margin-bottom: 20px;
+	font-size: 1.1em;
+}
+
+/* Единая сетка для всех блоков */
+.content-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	margin-top: 10px;
+}
+
+/* Единая карточка для всех блоков */
+.content-card {
+	background: #ffffff;
+	border: 1px solid #e4e4e4;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Единый заголовок для всех карточек - используем цвета header */
+.content-header {
+	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+	color: white;
+	padding: 15px;
+}
+
+.content-header h4 {
+	margin: 0 0 8px 0;
+	font-size: 1.3em;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.content-header h4 i {
+	font-size: 1.2em;
+	opacity: 0.9;
+}
+
+.content-meta {
+	font-size: 0.9em;
+	opacity: 0.9;
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.content-role {
+	font-size: 0.85em;
+	opacity: 0.8;
+}
+
+/* Единое содержимое для всех карточек */
+.content-body {
+	padding: 15px;
+}
+
+.content-description {
+	margin-bottom: 15px;
+}
+
+.content-description p {
+	margin: 0;
+	font-size: 1.1em;
+	color: #333;
+	line-height: 1.6;
+}
+
+.content-description p:first-child {
+	font-size: 1.2em;
+	color: #4acaa8;
+	font-weight: 600;
+	margin-bottom: 6px;
+}
+
+.content-details {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+	margin-bottom: 15px;
+	padding: 15px;
+	background: #f8f9fa;
+	border-radius: 8px;
+	border-left: 4px solid #4acaa8;
+}
+
+.detail-item {
+	font-size: 0.9em;
+	line-height: 1.5;
+}
+
+.detail-item strong {
+	color: #4acaa8;
+}
+
+.content-section h5 {
+	color: #4acaa8;
+	margin: 0 0 10px 0;
+	font-size: 1.1em;
+	font-weight: 600;
+}
+
+.content-section {
+	margin-bottom: 15px;
+}
+
+.content-section:last-child {
+	margin-bottom: 0;
+}
+
+.content-section ul {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.content-section li {
+	margin-bottom: 8px;
+	line-height: 1.5;
+}
+
+.content-section p {
+	margin: 0;
+	line-height: 1.5;
+	font-style: italic;
+	color: #666;
+}
+
+/* Все секции используют единую цветовую палитру header */
+
+/* Секция "О себе" */
+#one .content-card {
+	border-left: 4px solid #4acaa8;
+}
+
+#one .content-header {
+	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+}
+
+/* Секция "Навыки" */
+#two .content-card {
+	border-left: 4px solid #4acaa8;
+}
+
+#two .content-header {
+	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+}
+
+#two .content-description p:first-child {
+	color: #4acaa8;
+}
+
+#two .detail-item strong {
+	color: #4acaa8;
+}
+
+#two .content-section h5 {
+	color: #4acaa8;
+}
+
+/* Секция "Проекты" */
+#three .content-card {
+	border-left: 4px solid #4acaa8;
+}
+
+#three .content-header {
+	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+}
+
+#three .content-description p:first-child {
+	color: #4acaa8;
+}
+
+#three .detail-item strong {
+	color: #4acaa8;
+}
+
+#three .content-section h5 {
+	color: #4acaa8;
+}
+
+/* Секция "Образование" */
+#four .content-card {
+	border-left: 4px solid #4acaa8;
+}
+
+#four .content-header {
+	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+}
+
+#four .content-description p:first-child {
+	color: #4acaa8;
+}
+
+#four .detail-item strong {
+	color: #4acaa8;
+}
+
+#four .content-section h5 {
+	color: #4acaa8;
+}
+
+/* Секция "Контакты" */
+#five .content-card {
+	border-left: 4px solid #4acaa8;
+}
+
+#five .content-header {
+	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+}
+
+#five .content-description p:first-child {
+	color: #4acaa8;
+}
+
+#five .detail-item strong {
+	color: #4acaa8;
+}
+
+#five .content-section h5 {
+	color: #4acaa8;
+}
+
+/* Специальные отступы для секции "О себе" */
+#one .container {
+	margin: 10px auto;
+	padding: 0 20px;
+}
+
+#one .content-grid {
+	margin-top: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+	.content-details {
+		grid-template-columns: 1fr;
+	}
+	
+	.content-header,
+	.content-body {
+		padding: 10px;
+	}
+	
+	section {
+		padding: 15px 0;
+	}
+	
+	section .container {
+		margin: 5px auto;
+		padding: 0 15px;
+	}
+	
+	.content-grid {
+		gap: 15px;
+		margin-top: 5px;
+	}
+}
+
+/* Дополнительные стили для существующих элементов */
+.experience-timer {
+	color: #4acaa8;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.skill-bar {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	padding: 4px;
+	background: #f8f9fa;
+	border-radius: 5px;
+}
+
+.skill-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	min-width: 120px;
+	font-weight: bold;
+}
+
+.skill-level-negate {
+	height: 12px;
+	background: linear-gradient(90deg, #4acaa8, #d2f2e9);
+	border-radius: 6px;
+	transition: width 0.3s ease;
+}
+
+/* Классы для замены встроенных стилей */
+.skill-level-40 {
+	width: 40%;
+}
+
+.skill-level-50 {
+	width: 50%;
+}
+
+.skill-level-75 {
+	width: 75%;
+}
+
+.skill-level-30 {
+	width: 30%;
+}
+
+.skill-level-35 {
+	width: 35%;
+}
+
+.detailed-list {
+	line-height: 1.1em;
+	font-size: 14px;
+}
+
+.subheading {
+	font-weight: bold;
+	color: #4acaa8;
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+.marg-top {
+	margin-top: 5px;
+}
+
+.blue-shadow-text {
+	color: #4acaa8;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Стили для контактных элементов */
+.contact-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.contact-item {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	padding: 15px;
+	background: white;
+	border-radius: 6px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-item:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.contact-item .icon {
+	font-size: 1.5em;
+	color: #4acaa8;
+	min-width: 30px;
+	text-align: center;
+}
+
+.contact-item a {
+	color: #4acaa8;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: border-color 0.2s ease;
+}
+
+.contact-item a:hover {
+	border-bottom-color: #4acaa8;
+}
+
+/* Стили для форм */
+.content-section form {
+	margin: 0;
+}
+
+.content-section input,
+.content-section select,
+.content-section textarea {
+	background: white;
+	border: 1px solid #e4e4e4;
+	border-radius: 4px;
+	padding: 12px;
+	transition: border-color 0.2s ease;
+}
+
+.content-section input:focus,
+.content-section select:focus,
+.content-section textarea:focus {
+	border-color: #4acaa8;
+	outline: none;
+}
+
+.content-section .actions {
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.content-section .actions li {
+	margin: 0 10px;
+}
+
+@media (max-width: 736px) {
+	.contact-item {
+		flex-direction: column;
+		text-align: center;
+		gap: 10px;
+	}
+} 
+
+/* Стили для спойлера */
+.spoiler-container {
+	margin: 15px 0;
+	position: relative;
+	z-index: 1;
+}
+
+.spoiler-header {
+	background: linear-gradient(135deg, #4acaa8, #2c8f7a);
+	color: white;
+	padding: 12px 15px;
+	border-radius: 6px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: all 0.3s ease;
+	user-select: none;
+	position: relative;
+	z-index: 2;
+}
+
+.spoiler-header:hover {
+	background: linear-gradient(135deg, #2c8f7a, #1a6b5a);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.spoiler-header h5 {
+	margin: 0;
+	font-size: 1.1em;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.spoiler-icon {
+	font-size: 1.2em;
+	transition: transform 0.3s ease;
+}
+
+.spoiler-icon.rotated {
+	transform: rotate(180deg);
+}
+
+.spoiler-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease, padding 0.3s ease;
+	background: #f8f9fa;
+	border-radius: 0 0 6px 6px;
+	position: relative;
+	z-index: 1;
+}
+
+.spoiler-content.expanded {
+	max-height: 5000px; /* Увеличиваем для больших блоков */
+	padding: 15px;
+	border: 1px solid #e4e4e4;
+	border-top: none;
+}
+
+/* Адаптивность для спойлера */
+@media (max-width: 768px) {
+	.spoiler-header {
+		padding: 10px 12px;
+	}
+	
+	.spoiler-header h5 {
+		font-size: 1em;
+	}
+	
+	.spoiler-content.expanded {
+		padding: 12px;
+		max-height: 8000px; /* Еще больше для мобильных */
+	}
+} 

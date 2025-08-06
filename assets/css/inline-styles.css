@@ -1,0 +1,116 @@
+/* Стили для замены встроенных стилей из HTML файлов */
+
+/* Стили для разделителей */
+.hr-teal {
+	border: none;
+	height: 2px;
+	background-color: teal;
+}
+
+.hr-teal-border {
+	border: 2px solid teal;
+}
+
+/* Стили для изображений */
+.img-logo {
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+}
+
+/* Стили для основного контента */
+.main-padding {
+	padding-top: 12px;
+}
+
+/* Стили для ссылок */
+.link-teal {
+	color: teal;
+}
+
+.link-teal:hover {
+	color: #2c8f7a;
+	text-decoration: none;
+}
+
+/* Стили для сеток */
+.grid-4-columns {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	width: 60%;
+}
+
+.grid-4-columns-small {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1px;
+	width: 60%;
+}
+
+/* Стили для заголовков */
+.heading-teal {
+	color: teal;
+}
+
+/* Стили для текста */
+.text-small {
+	font-size: 14px;
+	line-height: 1.1em;
+}
+
+.text-medium {
+	font-size: 16px;
+	line-height: 1.1em;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-center-full {
+	width: 100%;
+	text-align: center;
+}
+
+/* Стили для отступов */
+.margin-bottom-12 {
+	margin-bottom: 12px;
+}
+
+.margin-left-25 {
+	margin-left: 25px;
+}
+
+/* Стили для списков */
+.list-detailed {
+	line-height: 1.1em;
+	font-size: 14px;
+}
+
+.list-detailed-medium {
+	font-size: 14px;
+	line-height: 1.1em;
+}
+
+/* Стили для контактной информации */
+.contact-info {
+	font-size: 14px;
+	line-height: 1.1em;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+	.grid-4-columns,
+	.grid-4-columns-small {
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.grid-4-columns,
+	.grid-4-columns-small {
+		grid-template-columns: 1fr;
+	}
+} 
