@@ -16,7 +16,7 @@
 
 /* Общие стили для всех секций */
 section {
-	padding: 20px 0;
+	padding: 0; /* Убираем padding для бесшовности */
 	background: var(--light-gray);
 }
 
@@ -25,9 +25,79 @@ section:nth-child(even) {
 }
 
 section .container {
-	max-width: 100%;
-	margin: 10px auto;
+	max-width: 95%; /* Делаем все блоки шире - увеличиваем с 100% до 95% */
+	margin: 1px auto; /* Уменьшаем margin в 10 раз с 10px до 1px */
 	padding: 0 20px;
+	width: 90em; /* Увеличиваем ширину с 45em до 90em */
+}
+
+/* Переопределяем стили для main > section > .container */
+#main > section > .container {
+	padding: 0 !important; /* Убираем padding полностью */
+	margin: 1px auto !important; /* Уменьшаем margin */
+}
+
+/* Переопределяем стили для медиа-запросов */
+@media screen and (max-width: 1680px) {
+	#main > section > .container {
+		padding: 0 !important;
+		margin: 1px auto !important;
+	}
+	
+	section .container {
+		width: 80em;
+		max-width: 95%;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	#main > section > .container {
+		padding: 0 !important;
+		margin: 1px auto !important;
+	}
+	
+	section .container {
+		width: 70em;
+		max-width: 95%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	#main > section > .container {
+		padding: 0 !important;
+		margin: 1px auto !important;
+	}
+	
+	section .container {
+		width: 100% !important;
+		max-width: 95%;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	#main > section > .container {
+		padding: 0 !important;
+		margin: 1px auto !important;
+	}
+	
+	section .container {
+		width: 100% !important;
+		max-width: 98%;
+		padding: 0 15px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#main > section > .container {
+		padding: 0 !important;
+		margin: 1px auto !important;
+	}
+	
+	section .container {
+		width: 100% !important;
+		max-width: 100%;
+		padding: 0 10px;
+	}
 }
 
 section h3 {
@@ -51,7 +121,7 @@ section h3::after {
 	width: 60px;
 	height: 3px;
 	background: linear-gradient(135deg, var(--primary-beige), var(--dark-beige));
-	border-radius: 2px;
+	border-radius: 0; /* Убираем border-radius для угловатости */
 }
 
 section > .container > p {
@@ -73,7 +143,7 @@ section > .container > p {
 .content-card {
 	background: #ffffff;
 	border: 1px solid var(--light-beige);
-	border-radius: 8px;
+	border-radius: 0; /* Убираем border-radius для угловатости */
 	box-shadow: 0 2px 8px rgba(139, 133, 120, 0.1);
 	overflow: hidden;
 	/* transition: transform 0.3s ease, box-shadow 0.3s ease; */
@@ -89,6 +159,7 @@ section > .container > p {
 	background: linear-gradient(135deg, var(--primary-beige), var(--dark-beige));
 	color: var(--text-dark);
 	padding: 15px;
+	border-radius: 0; /* Убираем border-radius для угловатости */
 }
 
 .content-header h4 {
@@ -148,7 +219,7 @@ section > .container > p {
 	margin-bottom: 15px;
 	padding: 15px;
 	background: var(--light-gray);
-	border-radius: 8px;
+	border-radius: 0; /* Убираем border-radius для угловатости */
 	border-left: 4px solid var(--primary-beige);
 }
 
@@ -290,13 +361,16 @@ section > .container > p {
 
 /* Специальные отступы для секции "О себе" */
 #one .container {
-	margin: 10px auto;
+	margin: 1px auto; /* Уменьшаем margin в 10 раз */
 	padding: 0 20px;
+	/* Убираем дублирование - используем общие стили */
 }
 
 #one .content-grid {
 	margin-top: 10px;
 }
+
+/* Адаптивность для блока "О себе" - теперь не нужна, так как применяется ко всем */
 
 /* Адаптивность */
 @media (max-width: 768px) {
@@ -310,12 +384,20 @@ section > .container > p {
 	}
 	
 	section {
-		padding: 15px 0;
+		padding: 0; /* Сохраняем бесшовность */
 	}
 	
 	section .container {
-		margin: 5px auto;
+		margin: 1px auto; /* Сохраняем уменьшенный margin */
 		padding: 0 15px;
+		width: 100% !important;
+		max-width: 98%;
+	}
+	
+	/* Переопределяем стили для main > section > .container на мобильных */
+	#main > section > .container {
+		padding: 0 !important;
+		margin: 1px auto !important;
 	}
 	
 	.content-grid {
@@ -337,7 +419,7 @@ section > .container > p {
 	margin-bottom: 10px;
 	padding: 4px;
 	background: var(--light-gray);
-	border-radius: 5px;
+	border-radius: 0; /* Убираем border-radius для угловатости */
 }
 
 .skill-title {
@@ -364,7 +446,7 @@ section > .container > p {
 .skill-level-negate {
 	height: 12px;
 	background: linear-gradient(90deg, var(--primary-beige), var(--accent-gold));
-	border-radius: 6px;
+	border-radius: 0; /* Убираем border-radius для угловатости */
 	transition: width 0.3s ease;
 }
 
@@ -512,7 +594,7 @@ section > .container > p {
 	gap: 15px;
 	padding: 15px;
 	background: white;
-	border-radius: 6px;
+	border-radius: 0; /* Убираем border-radius для угловатости */
 	box-shadow: 0 2px 4px rgba(139, 133, 120, 0.1);
 	/* transition: transform 0.2s ease, box-shadow 0.2s ease; */
 }
@@ -550,7 +632,7 @@ section > .container > p {
 .content-section textarea {
 	background: white;
 	border: 1px solid var(--light-beige);
-	border-radius: 4px;
+	border-radius: 0; /* Убираем border-radius для угловатости */
 	padding: 12px;
 	transition: border-color 0.2s ease;
 }
@@ -590,7 +672,7 @@ section > .container > p {
 	background: linear-gradient(135deg, var(--primary-beige), var(--dark-beige));
 	color: var(--text-dark);
 	padding: 12px 15px;
-	border-radius: 6px;
+	border-radius: 0; /* Убираем border-radius для угловатости */
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -635,7 +717,7 @@ section > .container > p {
 	overflow: hidden;
 	transition: max-height 0.5s ease, padding 0.3s ease;
 	background: #f8f9fa;
-	border-radius: 0 0 6px 6px;
+	border-radius: 0; /* Убираем border-radius для угловатости */
 	position: relative;
 	z-index: 1;
 }
@@ -737,6 +819,7 @@ section > .container > p {
 ul.feature-icons li:before {
 	background: var(--primary-beige) !important;
 	color: var(--text-dark) !important;
+	border-radius: 0 !important; /* Убираем border-radius для угловатости */
 }
 
 ul.feature-icons li:hover:before {
